@@ -42,7 +42,7 @@
         <nav class="canvas-menu mobile-menu">
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./exercises.html">exercises</a></li>
+                <li><a href="./exercises">exercises</a></li>
                 <li><a href="./healthy-nutrition.html">Healthy Nutrition</a></li>
             </ul>
         </nav>
@@ -70,23 +70,20 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./exercises.html">exercises</a></li>
-                            <li><a href="./healthy-nutrition.html">Healthy Nutrition</a></li>
+                            <li class="active"><a href="{{route('index')}}">Home</a></li>
+                            <li><a href="exercises">exercises</a></li>
+                            <li><a href="healthy">Healthy Nutrition</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="top-option">
-                        <div class="to-search search-switch">
-                            <i class="fa fa-search"></i>
-                        </div>
                         <div class="to-social">
-                            <a href="https://www.facebook.com/mostafa.alseed.54"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/mostafa.alseed.54">Login</a>
+                          
+                      
                         </div>
+                     
                     </div>
                 </div>
             </div>

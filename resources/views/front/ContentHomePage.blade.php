@@ -6,32 +6,21 @@
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="hs-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg">
+        @foreach($selectsectin as $sel)
+            <div class="hs-item set-bg" data-setbg="{{asset('img/start_section_homepage/'. $sel->img)}}">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6">
                             <div class="hi-text">
-                                <span>Shape your body</span>
-                                <h1>Be <strong>strong</strong> traning hard</h1>
+                                <span>{{$sel->strong}}</span>
+                                <h1>{{$sel->paragraph}} <strong>{{$sel->term}}</strong> traning hard</h1>
                                 <a href="#" class="primary-btn">Get info</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="hs-item set-bg" data-setbg="img/hero/hero-2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-6">
-                            <div class="hi-text">
-                                <span>Shape your body</span>
-                                <h1>Be <strong>strong</strong> traning hard</h1>
-                                <a href="#" class="primary-btn">Get info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <!-- Hero Section End -->
@@ -97,72 +86,23 @@
                 </div>
             </div>
             <div class="row">
+        @foreach($WHATWECANOFFERslectin as $WCs)
                 <div class="col-lg-4 col-md-6">
                     <div class="class-item">
                         <div class="ci-pic">
-                            <img src="img/classes/class-1.jpg" alt="">
+                            <img src="{{asset('img/what_we_can offer/'. $WCs->img)}}" alt="">
                             <!-- ahmed ayman -->
                             <div class="ci-pic-hover"></div>
                             <!-- ahmed ayman -->
                         </div>
                         <div class="ci-text">
-                            <span>STRENGTH</span>
-                            <h5>Weightlifting</h5>
+                            <span>{{$WCs->text}}</span>
+                            <h5>{{$WCs->paragraph}}</h5>
                             <a href="#"><i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="img/classes/class-2.jpg" alt="">
-                            <div class="ci-pic-hover"></div>
-                        </div>
-                        <div class="ci-text">
-                            <span>Cardio</span>
-                            <h5>Indoor cycling</h5>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="img/classes/class-3.jpg" alt="">
-                            <div class="ci-pic-hover"></div>
-                        </div>
-                        <div class="ci-text">
-                            <span>STRENGTH</span>
-                            <h5>Kettlebell power</h5>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="img/classes/class-4.jpg" alt="">
-                            <div class="ci-pic-hover"></div>
-                        </div>
-                        <div class="ci-text">
-                            <span>Cardio</span>
-                            <h4>Indoor cycling</h4>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="img/classes/class-5.jpg" alt="">
-                            <div class="ci-pic-hover"></div>
-                        </div>
-                        <div class="ci-text">
-                            <span>Training</span>
-                            <h4>Boxing</h4>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
+            @endforeach
                 </div>
             </div>
         </div>
@@ -174,23 +114,23 @@
     <div class="gallery-section">
         <div class="gallery">
             <div class="grid-sizer"></div>
-            <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/gallery-1.jpg">
-                <a href="img/gallery/gallery-1.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            <div class="gs-item grid-wide set-bg" data-setbg="{{asset('img/gallery/gallery-1.jpg')}}">
+                <a href="{{asset('img/gallery/gallery-1.jpg')}}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
-            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-2.jpg">
-                <a href="img/gallery/gallery-2.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            <div class="gs-item set-bg" data-setbg="{{asset('img/gallery/gallery-2.jpg')}}">
+                <a href="{{asset('img/gallery/gallery-2.jpg')}}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
-            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-3.jpg">
-                <a href="img/gallery/gallery-3.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            <div class="gs-item set-bg" data-setbg="{{asset('img/gallery/gallery-3.jpg')}}">
+                <a href="{{asset('img/gallery/gallery-3.jpg')}}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
-            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-4.jpg">
-                <a href="img/gallery/gallery-4.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            <div class="gs-item set-bg" data-setbg="{{asset('img/gallery/gallery-4.jpg')}}">
+                <a href="{{asset('img/gallery/gallery-4.jpg')}}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
-            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-5.jpg">
-                <a href="img/gallery/gallery-5.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            <div class="gs-item set-bg" data-setbg="{{asset('img/gallery/gallery-5.jpg')}}">
+                <a href="{{asset('img/gallery/gallery-5.jpg')}}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
-            <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/gallery-6.jpg">
-                <a href="img/gallery/gallery-6.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            <div class="gs-item grid-wide set-bg" data-setbg="{{asset('img/gallery/gallery-6.jpg')}}">
+                <a href="{{asset('img/gallery/gallery-6.jpg')}}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
         </div>
     </div>
@@ -211,57 +151,23 @@
                 </div>
             </div>
             <div class="row">
+
                 <div class="ts-slider owl-carousel">
+            @foreach($TRAINWITHEXPERTS as $TRAI)
+                
                     <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg">
+                        <div class="ts-item set-bg" data-setbg="{{ asset('img/TTRAIN_WITH_EXPERTS/' .$TRAI->img) }}">
                             <div class="ts_text">
-                                <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <h4>{{$TRAI->name}}</h4>
+                                <span>{{$TRAI->Job_title}}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-2.jpg">
-                            <div class="ts_text">
-                                <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-3.jpg">
-                            <div class="ts_text">
-                                <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-4.jpg">
-                            <div class="ts_text">
-                                <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-5.jpg">
-                            <div class="ts_text">
-                                <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-6.jpg">
-                            <div class="ts_text">
-                                <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
+
                 </div>
             </div>
+           
         </div>
     </section>
     <!-- Team Section End -->

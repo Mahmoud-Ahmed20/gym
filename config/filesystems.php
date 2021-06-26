@@ -54,6 +54,24 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+        'start_section_homepage' => [
+            'driver' => 'local',
+            'root'   => public_path() . 'public/img/start_section_homepage',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'what_we_can offer' => [
+            'driver' => 'local',
+            'root'   => public_path() . 'public/img/what_we_can offer',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'TTRAIN_WITH_EXPERTS' => [
+            'driver' => 'local',
+            'root'   => public_path() . 'public/img/TTRAIN_WITH_EXPERTS',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',
